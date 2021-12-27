@@ -1,0 +1,50 @@
+.logoSite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body {
+  background: #E2E0D8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+  background: #B8B8A5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: column;
+      -ms-flex-pack: column;
+          justify-content: column;
+  padding: 20px;
+}
+
+.main {
+  color: #202020;
+  margin: auto;
+  text-align: center;
+  -webkit-box-shadow: 4px 4px 10px #d6d6d6;
+          box-shadow: 4px 4px 10px #d6d6d6;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 500px;
+}
+
+section {
+  background-color: #F9F7F2;
+}
+/*# sourceMappingURL=style.css.map */
