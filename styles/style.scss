@@ -1,10 +1,15 @@
 
-$text-light: #feca57;
-$text-dark: #202020;
+$text-light: white;
+$text-dark: darkgrey;
 $shadow-light: 4px 4px 10px #d6d6d6;
-$background-dark: #B8B8A5;
-$background-mid: #E2E0D8;
-$background-light: #F9F7F2;
+$background-dark: #455056;
+$background-mid: #A0B9C8;
+$background-light: #F2F2F2;
+$colorA: #A0B9C8;
+$colorB: #F2F2F2;
+$colorC: #455056;
+$colorD: #666456;
+$colorE: #FFF1CB;
 
 
 
@@ -13,21 +18,79 @@ $background-light: #F9F7F2;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
+%flex-left {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+}
+
+html, body{
+    width: 100%;
+
+    margin:0;
+}
+
+*   {
+    box-sizing: border-box;
+
+}
 
 body {
-    background: $background-mid;
+
+    background: $background-light;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: $text-light;
+    
 }
 
 header {
-    background: $background-dark;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    justify-content: column;
-    padding: 20px;
+    background: $background-dark;
+    padding: 20px;    
+}
+
+header li a{
+    text-decoration: none;
+    color: $text-light;
+}
+
+header nav label{
+    display: none;
+}
+header nav label:hover{
+    cursor: pointer;
+}
+
+.logoSite {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 10px;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+.menu li{
+    padding: 5px;
+}
+
+#myBurger{
+    display: none;
 }
 
 .main{
@@ -42,9 +105,50 @@ header {
 }
 
 section{
-    background-color: $background-light;
+    @extend %flex-centered;
+    background-color: $background-mid;
+    
+    padding: 20px;
 }
 
-.logoSite {
-    @extend %flex-centered;
+
+
+footer{
+    background: $background-dark;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    bottom: 0px;
+    
 }
+
+
+/* règles CSS pour les Ecrans inférieurs à ??? */
+
+@media (max-width: 992px){
+    .menu{
+        display: none;
+    }
+
+    header nav label{
+        display: block;
+        box-sizing: border-box;
+    }
+
+    #myBurger[type=checkbox]:checked ~ .menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        position: absolute;
+        right: 0;
+        background-color: $colorD;
+        margin: 0;
+        width: 20%;
+        height: 100%;
+        
+    }
+}
+

@@ -1,4 +1,5 @@
-.logoSite {
+@charset "UTF-8";
+section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,31 +11,97 @@
           justify-content: center;
 }
 
+html, body {
+  width: 100%;
+  margin: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  background: #E2E0D8;
+  background: #F2F2F2;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white;
 }
 
 header {
-  background: #B8B8A5;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: column;
-      -ms-flex-pack: column;
-          justify-content: column;
+  background: #455056;
   padding: 20px;
 }
 
+header li a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav label {
+  display: none;
+}
+
+header nav label:hover {
+  cursor: pointer;
+}
+
+.logoSite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10px;
+}
+
+.menu {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+}
+
+.menu li {
+  padding: 5px;
+}
+
+#myBurger {
+  display: none;
+}
+
 .main {
-  color: #202020;
+  color: darkgrey;
   margin: auto;
   text-align: center;
   -webkit-box-shadow: 4px 4px 10px #d6d6d6;
@@ -45,6 +112,57 @@ header {
 }
 
 section {
-  background-color: #F9F7F2;
+  background-color: #A0B9C8;
+  padding: 20px;
+}
+
+footer {
+  background: #455056;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem 0;
+  bottom: 0px;
+}
+
+/* règles CSS pour les Ecrans inférieurs à ??? */
+@media (max-width: 992px) {
+  .menu {
+    display: none;
+  }
+  header nav label {
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  #myBurger[type=checkbox]:checked ~ .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    position: absolute;
+    right: 0;
+    background-color: #666456;
+    margin: 0;
+    width: 20%;
+    height: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
