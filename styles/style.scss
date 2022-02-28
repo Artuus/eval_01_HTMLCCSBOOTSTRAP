@@ -22,6 +22,7 @@ html,body{
     padding: 0;
     box-sizing: border-box;
     font-family: Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    
 }
 
 nav{
@@ -43,10 +44,7 @@ header{
 }
 
 .menu{
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 700;
+    display: none;
 }
 
 .menu li{
@@ -90,18 +88,32 @@ footer{
     display: none;
 }
 
-header nav label{
-    display: none;
-}
-
 header nav label:hover{
     cursor: pointer;
 }
 
-/* règles CSS pour les Ecrans inférieurs à ??? */
+header nav label{
+    display: block;
+    box-sizing: border-box;
+}
+
+#myBurger[type=checkbox]:checked ~ .menu{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height:100%;
+    position: fixed;
+    justify-content: center;
+    top: 5rem;
+    width: 100%;
+    left:0;
+    background-color: white;    
+}
+
+/* règles CSS pour les Ecrans supérieurs à 992px */
 
 @media (max-width: 992px){
-    .menu{
+    /*.menu{
         display: none;
     }
 
@@ -120,9 +132,22 @@ header nav label:hover{
         justify-content: center;
         top: 5rem;
         width: 100%;
-        background-color: white;
-        
-        
-    }
+        background-color: white;    
+    }*/
 }
 
+/*Regle CSS ECRANS supérieurs à 992px */
+@media (min-width:992px){
+    .menu{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        margin: 0px;
+        padding: 0px;
+    }
+    header nav label{
+        display: none;
+    }
+    
+}
