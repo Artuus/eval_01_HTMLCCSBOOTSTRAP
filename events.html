@@ -1,37 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>TurtleHeaven</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
-    <title>TurteWorld: La passion des Tortues.</title>
-</head>
-<body>
-    <header>     
+    <title>TurteHeaven: La passion des Tortues.</title>
+
+    <meta name="description" description="Site recueillant les informations sur l'association des amoureux des tortues TurtleWorld !">
+  </head>
+  <body>
+    <header>      
         <!--<img src="images/noun-turtle-2877792.png" alt="logo du monde des Tortues">-->
-        <nav>
-            <a href="#" class ="logo">
-                <h1>
-                    <img class="logoImg" src="images\noun-turtle-2877792.png" alt="Logo du site représentant une tortue.">
-                    <span class="TurtleWorld">TurtleWorld</span>
-                </h1>      
-            </a>
-            <label for="myBurger">☰</label>
-            <input type="checkbox" id="myBurger" name="myBurger"> 
-            <ul class="menu">
+        <nav class="navBar"> 
+            <h1 class="mainTitle">
+                <img class="logoImg" src="images\logoTitreRouge.png" alt="Logo du site représentant une tortue.">
+                TurtleHeaven
+            </h1> 
+            <div class="toggle">
+                <i class="fa-solid fa-bars open"></i>
+                <i class="fa-solid fa-xmark close"></i>
+            </div> 
+            <ul class="navMenu">
                 <li class="nav-item"><a href="index.html">Accueil</a></li>
                 <li class="nav-item"><a href="events.html">Evenements</a></li>
-                <li class="nav-item"><a href="#Contacts">Contacts</a></li>
             </ul>
         </nav>       
     </header>
     <main>
-        <section></section>
+        <section class="events">
+            <article class="event" >
+                
+                <h2  class="eventTitle"> Envenement 1 </h2>
+                
+                <div class="eventDescription">
+                    <h3><b>12/12/2021</b></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </article>
+            <article class="event" >
+                
+                <h2  class="eventTitle"> Envenement 1 </h2>
+                
+                <div class="eventDescription">
+                    <h3><b>12/12/2021</b></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </article>
+            <article class="event" >
+                
+                <h2  class="eventTitle"> Envenement 1 </h2>
+                
+                <div class="eventDescription">
+                    <h3><b>12/12/2021</b></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </article>
+            <article class="event" >
+                
+                <h2  class="eventTitle"> Envenement 1 </h2>
+                
+                <div class="eventDescription">
+                    <h3><b>12/12/2021</b></h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </article>
+           
+        
+        </section>
+
+
     </main>
     <footer>
         <p>Un paradis pour votre tortue !</p>
         <p><small>© TurtleWorld. Tous droits resérvés.</small></p>
     </footer>
-</body>
+    <script src="app.js"></script>
+    
+  </body>
 </html>

@@ -2,34 +2,34 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Le monde des tortues</title>
+    <title>TurtleHeaven</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles/style.css">
-    <title>TurteWorld: La passion des Tortues.</title>
+    <title>TurteHeaven: La passion des Tortues.</title>
 
     <meta name="description" description="Site recueillant les informations sur l'association des amoureux des tortues TurtleWorld !">
   </head>
   <body>
-    <header>     
+    <header>      
         <!--<img src="images/noun-turtle-2877792.png" alt="logo du monde des Tortues">-->
-        <nav>
-            <a href="#" class ="logo">
-                <h1>
-                    <img class="logoImg" src="images\noun-turtle-2877792.png" alt="Logo du site représentant une tortue.">
-                    <span class="TurtleWorld">TurtleWorld</span>
-                </h1>      
-            </a>
-            <label for="myBurger">☰</label>
-            <input type="checkbox" id="myBurger" name="myBurger"> 
-            <ul class="menu">
+        <nav class="navBar"> 
+            <h1 class="mainTitle">
+                <img class="logoImg" src="images\logoTitreRouge.png" alt="Logo du site représentant une tortue.">
+                TurtleHeaven
+            </h1> 
+            <div class="toggle">
+                <i class="fa-solid fa-bars open"></i>
+                <i class="fa-solid fa-xmark close"></i>
+            </div> 
+            <ul class="navMenu">
                 <li class="nav-item"><a href="index.html">Accueil</a></li>
                 <li class="nav-item"><a href="events.html">Evenements</a></li>
-                <li class="nav-item"><a href="#Contacts">Contacts</a></li>
             </ul>
-        </nav>         
+        </nav>       
     </header>
     <main>
-        <section>
-            <article class="presentation">
+        <section class="presentation">
+            <article class="articleOne">
                 <h2>Bienvenue sur TurteWorld, le site des amoureux des tortues !</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -37,29 +37,46 @@
                     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
             </article>
         
-            <article class="presentation">
-                <h2>Bienvenue sur le site des amoureux des tortues !</h2>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                    when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                    It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+            <article class="articleTwo">
+                <h2>Laquelle préferez vous ?</h2>
+                <div class="racesTortues">
+                    <div class="tortueTerre">
+                        <h3> Tortues de terre </h2>
+                        <p>Les tortues terrestres forment les testudinidés (Testudinidae),
+                            une famille de tortues cryptodires. Ce sont des tortues qui passent toute leur vie sur
+                            la terre sans avoir besoin d'un cours d'eau pour vivre.
+                            Elles possèdent une carapace généralement beaucoup plus bombée que les tortues aquatiques et des pattes massives munies de griffes.
+                        </p>
+                    </div>
+                    <div class="tortueMer">
+                        <h3> Tortues aquatiques </h2>
+                        <p>Les tortues d'eau douce sont des tortues qui passent leur vie dans ou à proximité immédiate de l'eau douce.
+                            Elles possèdent une carapace généralement beaucoup moins bombée que les tortues terrestres et des pattes plus ou moins palmées. Leurs pattes sont des palettes natatoires, contrairement aux tortues terrestres qui ont des pattes massives munies de griffes. Elles sont carnivores étant jeunes,
+                            ensuite elles deviennent généralement omnivores vers l'âge de 2 ans alors que les tortues terrestres sont herbivores.
+                        </p>
+                    </div>    
+                </div>
+                
             </article>
        
-            <article class="presentation">
-                <h2>Bienvenue sur le site des amoureux des tortues !</h2>
+            <article class="articleTree">
+                <h2>Notre association :</h2>
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
                     when an unknown printer took a galley of type and scrambled it to make a type specimen book.
                     It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VReCpkav3RY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        
             </article>
         </section>
-        <section class="sectionVideo">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VReCpkav3RY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
+
+
     </main>
     <footer>
         <p>Un paradis pour votre tortue !</p>
         <p><small>© TurtleWorld. Tous droits resérvés.</small></p>
     </footer>
+    <script src="app.js"></script>
+    
   </body>
 </html>
