@@ -19,42 +19,59 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 12vh;
   background-color: #002642;
   color: #F8F4E3;
-  padding: 0 2rem;
-}
-
-nav {
-  width: 100%;
-  height: 12vh;
+  padding: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 60px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1rem;
 }
 
-.mainTitle {
+header nav .mainTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 50px;
+  font-size: 3rem;
 }
 
-.logoImg {
-  height: 4rem;
+header nav .mainTitle .logoImg {
+  height: 3rem;
   padding-right: 1rem;
 }
 
+header nav .nav-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
 /* FOOTER */
+footer {
+  padding: 0.5rem;
+}
+
 footer p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,6 +86,7 @@ footer p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0.5rem;
 }
 
 /* Section presentation*/
@@ -87,6 +105,7 @@ footer p {
       -ms-flex-direction: column;
           flex-direction: column;
   color: #F8F4E3;
+  padding-top: 160px;
 }
 
 article {
@@ -103,20 +122,41 @@ article {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
+  padding: 6rem 3rem 8rem 3rem;
+  width: 100%;
+}
+
+article > * {
+  max-width: 1200px;
 }
 
 article p {
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   line-height: 2.5rem;
+  padding: 1rem;
+}
+
+article h2 {
+  font-size: 3rem;
+  padding: 2rem;
+  font-family: 'montserrat';
 }
 
 article h3 {
-  font-size: 30px;
+  font-size: 2rem;
+  padding: 1rem;
 }
 
-article h2, p {
-  padding: 2rem;
+article .video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .articleTwo {
@@ -124,14 +164,22 @@ article h2, p {
   color: #002642;
 }
 
-h2 {
-  font-size: 50px;
-  font-family: 'montserrat';
+.articleTwo .tortueTerre, .articleTwo .tortueMer {
+  padding-top: 2rem;
 }
 
-p {
-  font-family: "work-sans";
-  font-size: 2rem;
+.articleThree h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.articleThree iframe {
+  padding: 1rem;
+  height: 800px;
 }
 
 /* Section Races Tortues */
@@ -147,16 +195,17 @@ p {
       justify-content: space-around;
 }
 
-.racesTortues div {
-  padding: 3rem;
-}
-
 /* EVENEMENTS */
 .events {
   padding-top: 12vh;
 }
 
-.event {
+.events .event:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.events .event {
   margin: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,14 +217,18 @@ p {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: auto;
   border: 1px solid;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 10px;
+  padding: 0;
 }
 
-.eventTitle {
+.events .event .eventTitle {
   width: 100%;
   height: 400px;
   background: #000 80%/cover url("../images/Tortue_02.jpg") no-repeat;
@@ -192,7 +245,7 @@ p {
           justify-content: center;
 }
 
-.eventDescription {
+.events .event .eventDescription {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,12 +260,12 @@ p {
   font-family: 'montserrat';
 }
 
-.eventDescription p {
+.events .event .eventDescription p {
   font-family: 'montserrat';
   padding: 1rem;
 }
 
-.eventDescription h3 {
+.events .event .eventDescription h3 {
   font-size: 3rem;
 }
 
@@ -264,24 +317,24 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2rem;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
   text-decoration: none;
-}
-
-.nav-item {
-  padding: 20px;
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-family: 'montserrat';
-  font-weight: 700;
 }
 
 .navMenu li a {
   color: #F8F4E3;
   text-decoration: none;
+}
+
+.navMenu .nav-item {
+  padding: 20px;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: 'montserrat';
+  font-weight: 700;
 }
 
 .afficher .navMenu {
@@ -297,9 +350,6 @@ p {
 
 /* MODE PC */
 @media all and (min-width: 991px) {
-  :root {
-    font-size: 10px;
-  }
   .toggle {
     display: none;
   }
@@ -311,9 +361,16 @@ p {
         -ms-flex-direction: row;
             flex-direction: row;
     left: 0;
-    padding: 2rem;
+    padding: 0;
     height: auto;
     width: auto;
+  }
+  .navMenu .nav-item {
+    padding: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'montserrat';
+    font-weight: 700;
   }
   .events {
     display: -webkit-box;
@@ -323,13 +380,16 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: auto;
   }
   .events .event {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    width: 30%;
+    width: 40%;
   }
 }
 /*# sourceMappingURL=style.css.map */
